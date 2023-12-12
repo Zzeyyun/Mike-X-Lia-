@@ -1,11 +1,17 @@
 function playProjection() {
-    // Simulate tape insertion animation
     const tape = document.getElementById('tape');
     tape.style.animation = 'tapeInsert 2s forwards';
 
-    // Show the message after a delay
     setTimeout(() => {
         const message = document.getElementById('message');
-        message.style.animation = 'fadeIn 2s forwards';
+        message.classList.remove('hidden');
+        const flowerAnimation = document.getElementById('flowerAnimation');
+        flowerAnimation.style.animation = 'flowerAnimation 5s forwards';
     }, 2000);
+
+    setTimeout(() => {
+        const mickeyFilm = document.getElementById('mickeyFilm');
+        mickeyFilm.classList.remove('hidden');
+        mickeyFilm.style.animation = 'mickeyFilmAnimation 10s forwards';
+    }, 7000);
 }
